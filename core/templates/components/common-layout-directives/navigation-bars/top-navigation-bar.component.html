@@ -1,4 +1,4 @@
-<div class="navbar-header e2e-test-navbar-header oppia-top-navigation-bar">
+<div class="navbar-header e2e-test-navbar-header oppia-top-navigation-bar" style="margin-left: 20px; ">
   <a *ngIf="windowIsNarrow && !pageIsIframed"
      (click)="toggleSidebar($event)"
      class="navbar-brand oppia-navbar-menu oppia-transition-200 e2e-mobile-test-navbar-button ml-0"
@@ -197,15 +197,28 @@
             </li>
             <li class="nav-item">
               <a class="dropdown-item nav-link oppia-navbar-tab-content about-link oppia-impact-report-btn e2e-test-navbar-impact-report-button"
-                 [href]="IMPACT_REPORT_LINK"
+                 [href]="impactReportLink2022"
                  target="_blank"
-                 (blur)="aboutDropdown.close()"
-                 rel="noopener">
+                 rel="noopener"
+                 style="display: block; margin-bottom: 10px;">
                 <span class="link">
                   {{'I18N_TOPNAV_IMPACT_REPORT' | translate}}
                 </span>
-                <i class="fas fa-external-link-alt launch-icon"></i>
+            
               </a>
+          
+              <div class="impact-report-buttons" style="margin-top: 10px;">
+                <a class="btn" href="https://drive.google.com/file/d/1zowwvv1bXdvZ9295c7QqK4n4P_iKMEcc/view?usp=drive_link" 
+                   target="_blank" 
+                   style="display: inline-block; margin-right: 5px; color: #009688;">
+                  2022 Impact Report <i class="fas fa-external-link-alt launch-icon"></i>
+                </a>
+                <a class="btn" href="https://drive.google.com/file/d/1lPu2g3HXpMDrKJu-Nssh67ynxpWxxfw9/view?usp=drive_link" 
+                   target="_blank" 
+                   style="display: inline-block; margin-right: 5px; color: #009688;">
+                  2023 Impact Report <i class="fas fa-external-link-alt launch-icon"></i>
+                </a>
+              </div>
             </li>
           </ul>
         </li>
